@@ -70,3 +70,19 @@ Guests can leave reviews and ratings after their stay. Hosts can also respond to
 
 **5. Payment Processing**  
 Handles secure payment transactions for bookings. Supports multiple payment methods such as credit cards and PayPal. This ensures smooth financial transactions between guests and hosts.
+## API Security
+
+**1. Authentication**  
+All users will authenticate via secure login, using hashed passwords and JSON Web Tokens (JWTs). Authentication ensures that only legitimate users can access their accounts.
+
+**2. Authorization**  
+Role-based access control (RBAC) will restrict users to actions allowed for their role (guest, host, admin). This prevents unauthorized access to sensitive data and operations.
+
+**3. Rate Limiting**  
+API requests will be monitored and limited to prevent abuse and denial-of-service attacks. Rate limiting ensures the system remains stable and available to all users.
+
+**4. Data Protection**  
+Sensitive data such as passwords and payment information will be encrypted both at rest and in transit. This protects user information from breaches or interception.
+
+**5. Secure Payment Handling**  
+Payments will be processed through secure payment gateways using HTTPS and tokenized transactions. This ensures financial data remains safe and prevents fraud.
