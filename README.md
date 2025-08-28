@@ -54,3 +54,19 @@ Oversees project progress, coordinates between team members, and ensures deadlin
 
 **Quality Assurance (QA) Engineer**  
 Tests the application, finds bugs, and ensures the product meets quality standards.
+## Feature Breakdown
+
+**1. User Management**  
+Allows users to register, log in, and manage their profiles. Users can be guests, hosts, or admins, each with specific permissions. This feature ensures secure authentication and role-based access control.
+
+**2. Property Management**  
+Hosts can add, update, and remove properties. Each property includes details like location, description, images, and amenities. This enables users to browse available accommodations easily.
+
+**3. Booking System**  
+Guests can book properties for specific dates. The system checks availability and generates a booking record. This ensures proper scheduling and prevents double bookings.
+
+**4. Review and Rating System**  
+Guests can leave reviews and ratings after their stay. Hosts can also respond to reviews. This feature helps build trust and ensures quality feedback.
+
+**5. Payment Processing**  
+Handles secure payment transactions for bookings. Supports multiple payment methods such as credit cards and PayPal. This ensures smooth financial transactions between guests and hosts.
