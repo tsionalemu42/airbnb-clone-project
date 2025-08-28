@@ -86,3 +86,15 @@ Sensitive data such as passwords and payment information will be encrypted both 
 
 **5. Secure Payment Handling**  
 Payments will be processed through secure payment gateways using HTTPS and tokenized transactions. This ensures financial data remains safe and prevents fraud.
+## CI/CD Pipeline
+
+**Continuous Integration (CI)** ensures that every change to the codebase is automatically tested and integrated, preventing integration issues and improving code quality.  
+
+**Continuous Deployment (CD)** automates the deployment process, allowing changes to be delivered to production quickly and reliably.  
+
+**Tools:**  
+- **GitHub Actions:** Automates testing, building, and deployment workflows.  
+- **Docker:** Containerizes applications to ensure consistent environments across development, testing, and production.  
+- **Jenkins (optional):** Can also be used to orchestrate more complex pipelines if needed.  
+
+Implementing a CI/CD pipeline improves development efficiency, reduces manual errors, and ensures reliable releases for the project.
