@@ -54,8 +54,69 @@ Oversees project progress, coordinates between team members, and ensures deadlin
 
 **Quality Assurance (QA) Engineer**  
 Tests the application, finds bugs, and ensures the product meets quality standards.
-## Feature Breakdown
 
+#Database Design
+1. Identify Entities and Their Attributes
+For an Airbnb-like database, the core entities are:
+User
+    • user_id (PK)
+    • full_name
+    • email
+    • phone_number
+    • password
+    • role (guest, host, admin)
+    • created_at
+Property
+    • property_id (PK)
+    • host_id (FK → User.user_id)
+    • title
+    • description
+    • location
+    • price_per_night
+    • property_type
+    • status (available, booked, inactive)
+    • created_at
+Booking
+    • booking_id (PK)
+    • user_id (FK → User.user_id) → the guest who books
+    • property_id (FK → Property.property_id)
+    • start_date
+    • end_date
+    • status (pending, confirmed, cancelled)
+    • total_price
+Payment
+    • payment_id (PK)
+    • booking_id (FK → Booking.booking_id)
+    • amount
+    • payment_date
+    • payment_method (card, PayPal, mobile money)
+    • status (paid, refunded, failed)
+Review
+    • review_id (PK)
+    • booking_id (FK → Booking.booking_id)
+    • user_id (FK → User.user_id)
+    • rating
+    • comment
+    • created_at
+
+2. Define Relationships
+    • User ↔ Property:
+A User (host) can create multiple Properties.
+(1-to-Many)
+    • User ↔ Booking:
+A User (guest) can make multiple Bookings.
+(1-to-Many)
+    • Property ↔ Booking:
+A Property can have many Bookings over time.
+(1-to-Many)
+    • Booking ↔ Payment:
+A Booking has one or more Payments.
+(1-to-Many)
+    • Booking ↔ Review:
+A Booking can have one Review.
+(1-to-1 or 1-to-0/1)
+
+## Feature Breakdown
 **1. User Management**  
 Allows users to register, log in, and manage their profiles. Users can be guests, hosts, or admins, each with specific permissions. This feature ensures secure authentication and role-based access control.
 
